@@ -21,3 +21,28 @@ vars:
     description: Feature name
     default: Sample
     prompt: What's the feature's name?
+  entity_name:
+    type: string
+    description: Entity name
+    default: Sample
+    prompt: What's the entity's name?
+  repository_name:
+    type: string
+    description: Repository abstract name without "Repository" suffix
+    default: Sample
+    prompt: What's the repository's name?
+  cubit_name:
+    type: string
+    description: Cubit name without "Cubit" suffix
+    default: Sample
+    prompt: What's the cubit's name?
+  page_name:
+    type: string
+    description: Page name without "Page" suffix
+    default: Sample
+    prompt: What's the page's name?
+  is_fetch_list:
+    type: boolean
+    description: Does the fetch method return a list?
+    default: true
+    prompt: Does the fetch method return a list?
