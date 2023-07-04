@@ -6,11 +6,11 @@ import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repositor
 
 class Mock{{repository_name.pascalCase()}}Repository implements {{repository_name.pascalCase()}}Repository {
   @override
-  Future<Either<{{repository_name.pascalCase()}}Failure, {{entity_name.pascalCase()}}>> fetch() async {
+  Future<Option<{{repository_name.pascalCase()}}Failure>> upload({{entity_name.pascalCase()}} {{entity_name.camelCase()}}) {{repository_method_name.snakeCase()}} async {
     try {
-      return Right({{entity_name.pascalCase()}})();
+      return const None();
     } catch (e) {
-      return Left({{repository_name.pascalCase()}}Failure(e.toString()));
+      return Some({{repository_name.pascalCase()}}Failure(e.toString()));
     }
   }
 }
