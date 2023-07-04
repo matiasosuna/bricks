@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
-import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snake_case()}}.dart';
+import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 
-import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/{{cubit_name.snakeCase()}}_state.dart';
+import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/submit/{{cubit_name.snakeCase()}}_state.dart';
 
 export '{{cubit_name.snakeCase()}}_state.dart';
 

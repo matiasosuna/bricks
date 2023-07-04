@@ -21,7 +21,7 @@ class {{page_name.pascalCase()}}Page extends StatelessWidget {
             builder: (context, state) {
               return state.when(
                 loading: () => const Center(child: CircularProgressIndicator.adaptive()),
-                success: (data) => const Text('Success'),
+                success: () => const Text('Success'),
                 fail: (failure) => Text(failure.message),
               );
             },
