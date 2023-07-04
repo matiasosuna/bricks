@@ -6,6 +6,12 @@
       <excludeFolder url="file://$MODULE_DIR$/full_feature/__brick__/{{feature_name.snakeCase()}}/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/full_feature/__brick__/{{feature_name.snakeCase()}}/build" />
       <excludeFolder url="file://$MODULE_DIR$/full_feature/__brick__/{{feature_name.snakeCase()}}/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/full_feature_form/__brick__/{{feature_name.snakeCase()}}/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/full_feature_form/__brick__/{{feature_name.snakeCase()}}/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/full_feature_form/__brick__/{{feature_name.snakeCase()}}/build" />
+      <excludeFolder url="file://$MODULE_DIR$/full_feature_list/__brick__/{{feature_name.snakeCase()}}/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/full_feature_list/__brick__/{{feature_name.snakeCase()}}/build" />
+      <excludeFolder url="file://$MODULE_DIR$/full_feature_list/__brick__/{{feature_name.snakeCase()}}/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

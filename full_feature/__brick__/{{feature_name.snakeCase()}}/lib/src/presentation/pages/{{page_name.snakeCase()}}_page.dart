@@ -9,15 +9,17 @@ class {{page_name.pascalCase()}}Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<{{cubit_name.pascalCase()}}Cubit, {{cubit_name.pascalCase()}}State>(
-      bloc: bloc,
-      builder: (context, state) {
-        return state.when(
-          loading: () => const Center(child: CircularProgressIndicator.adaptive()),
-          success: (data) => const Text('Success'),
-          fail: (failure) => Text(failure.message),
-        );
-      },
+    return Scaffold(
+      body: BlocBuilder<{{cubit_name.pascalCase()}}Cubit, {{cubit_name.pascalCase()}}State>(
+        bloc: bloc,
+        builder: (context, state) {
+          return state.when(
+            loading: () => const Center(child: CircularProgressIndicator.adaptive()),
+            success: (data) => const Text('Success'),
+            fail: (failure) => Text(failure.message),
+          );
+        },
+      ),
     );
   }
 }

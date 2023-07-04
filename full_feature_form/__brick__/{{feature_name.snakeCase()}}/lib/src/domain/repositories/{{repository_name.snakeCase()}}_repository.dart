@@ -3,5 +3,5 @@ import 'package:{{feature_name.snakeCase()}}/src/domain/failures/{{repository_na
 import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 
 abstract class {{repository_name.pascalCase()}}Repository {
-  Future<Option<{{repository_name.pascalCase()}}Failure>> upload({{entity_name.pascalCase()}} {{entity_name.camelCase()}}) {{repository_method_name.snakeCase()}};
+  Future<Option<{{repository_name.pascalCase()}}Failure>> {{repository_method_name.snakeCase()}}({{entity_name.pascalCase()}} {{entity_name.camelCase()}});
 }
