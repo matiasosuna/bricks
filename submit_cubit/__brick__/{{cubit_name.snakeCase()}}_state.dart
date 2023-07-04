@@ -8,7 +8,7 @@ part '{{cubit_name.snakeCase()}}_state.freezed.dart';
 class {{cubit_name.pascalCase()}}State with _${{cubit_name.pascalCase()}}State {
   const factory {{cubit_name.pascalCase()}}State.loading() = Loading{{cubit_name.pascalCase()}}State;
 
-  const factory {{cubit_name.pascalCase()}}State.success({{entity_name.pascalCase()}} {{entity_name.camelCase()}}) = Success{{cubit_name.pascalCase()}}State;
+  const factory {{cubit_name.pascalCase()}}State.success() = Success{{cubit_name.pascalCase()}}State;
 
   const factory {{cubit_name.pascalCase()}}State.fail(String failure) = Fail{{cubit_name.pascalCase()}}State;
 }
