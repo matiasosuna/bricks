@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:autos/src/data/repositories/mock_{{repository_name.snakeCase()}}_repository.dart';
+import 'package:autos/src/presentation/pages/{{page_name.snakeCase()}}_page.dart';
 
 class {{feature_name.pascalCase()}}FeatureBuilder {
   Widget build() {
