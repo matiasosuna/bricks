@@ -12,7 +12,7 @@ class SubmitCubit extends Cubit<SubmitState> {
 
   Future<void> fetch({{submit_entity_name.pascalCase()}} {{submit_entity_name.camelCase()}}) async {
     emit(const SubmitState.loading());
-    final result = await repository.{{repository_method_name.snakeCase()}}({{submit_entity_name.camelCase()}});
+    final result = await repository.submit({{submit_entity_name.camelCase()}});
     result.fold(
       () => emit(SubmitState.success()),
       (failure) => emit(SubmitState.fail(failure)),

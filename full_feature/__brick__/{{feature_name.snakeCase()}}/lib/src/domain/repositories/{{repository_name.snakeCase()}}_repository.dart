@@ -13,6 +13,6 @@ abstract class {{repository_name.pascalCase()}}Repository {
 {{/include_fetch_list_method}}
 
 {{#include_update_method}}
-  Future<Option<{{repository_name.pascalCase()}}Failure>> submit({{update_entity.pascalCase()}} {{update_entity.camelCase()}});
+  Future<Option<{{repository_name.pascalCase()}}Failure>> submit({{submit_entity_name.pascalCase()}} {{submit_entity_name.camelCase()}});
 {{/include_update_method}}
 }

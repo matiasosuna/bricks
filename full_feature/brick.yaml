@@ -47,12 +47,6 @@ vars:
     description: Entity name for the update method
     default: SubmitEntity
     prompt: What's the entity's name for the update method?
-
-  cubit_name:
-    type: string
-    description: Cubit name without "Cubit" suffix
-    default: Cubit
-    prompt: What's the cubit's name?
   page_name:
     type: string
     description: Page name without "Page" suffix
