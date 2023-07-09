@@ -1,3 +1,4 @@
+{{#include_fetch_method}}
 import 'package:bloc/bloc.dart';
 
 import '{{entity_name.snakeCase()}}_state.dart';
@@ -17,3 +18,9 @@ class {{entity_name.pascalCase()}}Cubit extends Cubit<{{entity_name.pascalCase()
     );
   }
 }
+
+{{/include_fetch_method}}
+
+{{^include_fetch_method}}
+remove file
+{{/include_fetch_method}}

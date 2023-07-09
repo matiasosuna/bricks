@@ -1,3 +1,4 @@
+{{#include_fetch_list_method}}
 import 'package:bloc/bloc.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
 
@@ -18,3 +19,7 @@ class {{entity_name.pascalCase()}}ListCubit extends Cubit<{{entity_name.pascalCa
     );
   }
 }
+{{/include_fetch_list_method}}
+{{^include_fetch_list_method}}
+remove file
+{{/include_fetch_list_method}}

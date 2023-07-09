@@ -1,3 +1,4 @@
+{{#include_fetch_method}}
 import 'package:bloc/bloc.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
 
@@ -19,3 +20,8 @@ class SubmitCubit extends Cubit<SubmitState> {
     );
   }
 }
+{{/include_fetch_method}}
+
+{{^include_fetch_method}}
+remove file
+{{/include_fetch_method}}
