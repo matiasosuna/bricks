@@ -11,7 +11,7 @@ class {{entity_name.pascalCase()}}ListCubit extends Cubit<{{entity_name.pascalCa
 
   Future<void> fetch() async {
     emit(const {{entity_name.pascalCase()}}ListState.loading());
-    final result = await repository.fetchById();
+    final result = await repository.fetchList();
     result.fold(
       (failure) => emit({{entity_name.pascalCase()}}ListState.fail(failure)),
       (data) => emit({{entity_name.pascalCase()}}ListState.success(data)),

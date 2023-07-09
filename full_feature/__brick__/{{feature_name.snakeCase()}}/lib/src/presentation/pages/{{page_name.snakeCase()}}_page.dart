@@ -9,8 +9,8 @@ class {{page_name.pascalCase()}}Page extends StatelessWidget {
     required this.submitCubit,
   });
 
-  final {{cubit_name.pascalCase()}}Cubit byIdCubit;
-  final {{cubit_name.pascalCase()}}ListCubit listCubit;
+  final {{entity_name.pascalCase()}}Cubit byIdCubit;
+  final {{entity_name.pascalCase()}}ListCubit listCubit;
   final FormCubit formCubit;
   final SubmitCubit submitCubit;
 

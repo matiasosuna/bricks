@@ -42,11 +42,11 @@ vars:
     description: Does the repository include an update method?
     default: true
     prompt: Does the repository include an update method?
-  update_entity:
+  submit_entity_name:
     type: string
-    description: Update method parameters
-    default:
-    prompt: What are the update method parameters (with var name)? Enter to skip
+    description: Entity name for the update method
+    default: SubmitEntity
+    prompt: What's the entity's name for the update method?
 
   cubit_name:
     type: string

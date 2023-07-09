@@ -10,7 +10,7 @@ class Mock{{repository_name.pascalCase()}}Repository implements {{repository_nam
   @override
   Future<Either<{{repository_name.pascalCase()}}Failure, {{entity_name.pascalCase()}}>> fetchById(String id) async {
     try {
-      return Right({{entity_name.pascalCase()}})();
+      return Right({{entity_name.pascalCase()}}());
     } catch (e) {
       return Left({{repository_name.pascalCase()}}Failure(e.toString()));
     }
@@ -21,7 +21,7 @@ class Mock{{repository_name.pascalCase()}}Repository implements {{repository_nam
   @override
   Future<Either<{{repository_name.pascalCase()}}Failure, List<{{entity_name.pascalCase()}}>>> fetchList() async {
     try {
-      return Right({{entity_name.pascalCase()}})();
+      return Right([{{entity_name.pascalCase()}}()]);
     } catch (e) {
       return Left({{repository_name.pascalCase()}}Failure(e.toString()));
     }
