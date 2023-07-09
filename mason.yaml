@@ -1,0 +1,6 @@
+bricks:
+  hello: 0.1.0+1
+  repository_pair:
+    path: repository_pair
+  full_feature:
+    path: full_feature

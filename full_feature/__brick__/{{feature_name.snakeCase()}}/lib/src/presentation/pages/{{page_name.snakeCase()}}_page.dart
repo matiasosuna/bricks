@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/{{cubit_name.snakeCase()}}_cubit.dart';
 
 class {{page_name.pascalCase()}}Page extends StatelessWidget {
-  const {{page_name.pascalCase()}}Page({super.key, required this.bloc});
+  const {{page_name.pascalCase()}}Page({super.key,
+    required this.byIdCubit,
+    required this.listCubit,
+    required this.formCubit,
+    required this.submitCubit,
+  });
 
-  final {{cubit_name.pascalCase()}}Cubit bloc;
+  final {{cubit_name.pascalCase()}}Cubit byIdCubit;
+  final {{cubit_name.pascalCase()}}ListCubit listCubit;
+  final FormCubit formCubit;
+  final SubmitCubit submitCubit;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocBuilder<{{cubit_name.pascalCase()}}Cubit, {{cubit_name.pascalCase()}}State>(
-        bloc: bloc,
-        builder: (context, state) {
-          return state.when(
-            loading: () => const Center(child: CircularProgressIndicator.adaptive()),
-            success: (data) => const Text('Success'),
-            fail: (failure) => Text(failure.message),
-          );
-        },
-      ),
+      body: Text('page'),
     );
   }
 }
