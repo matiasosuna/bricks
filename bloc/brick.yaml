@@ -1,0 +1,29 @@
+name: bloc
+description: A new brick created with the Mason CLI.
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.41 <0.1.0"
+
+vars:
+  entity_name:
+    type: string
+    description: Entity name
+    default: Entity
+    prompt: What's the entity's name?
+  is_by_id:
+    type: boolean
+    description: Is the entity identified by an ID?
+    default: true
+    prompt: Is the entity identified by an ID?
+  is_list:
+    type: boolean
+    description: Is the entity a list?
+    default: true
+    prompt: Is the entity a list?
+  is_submit:
+    type: boolean
+    description: Is the entity a submit?
+    default: true
+    prompt: Is the entity a submit?

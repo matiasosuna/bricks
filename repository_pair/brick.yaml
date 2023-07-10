@@ -46,8 +46,18 @@ vars:
     description: Repository method parameters
     default: param
     prompt: Parameters?
-  is_return_type_list:
+  has_list_method:
     type: boolean
-    description: Does the fetch method return a list?
+    description: Does the repository include a fetch list method?
     default: true
-    prompt: Does the fetch method return a list?
+    prompt: Does the repository include a fetch list method?
+  has_by_id_method:
+    type: boolean
+    description: Does the repository include a fetch by id method?
+    default: true
+    prompt: Does the repository include a fetch by id method?
+  has_submit_method:
+    type: boolean
+    description: Does the repository include a submit method?
+    default: true
+    prompt: Does the repository include a submit method?

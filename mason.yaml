@@ -4,3 +4,5 @@ bricks:
     path: repository_pair
   full_feature:
     path: full_feature
+  bloc:
+    path: bloc

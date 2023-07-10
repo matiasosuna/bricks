@@ -12,6 +12,12 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.1
   freezed_annotation: ^2.2.0
+  design_system:
+    path: ../../design_system
+  commons:
+    path: ../../commons
+  core:
+    path: ../../core
 
 dev_dependencies:
   flutter_test:
