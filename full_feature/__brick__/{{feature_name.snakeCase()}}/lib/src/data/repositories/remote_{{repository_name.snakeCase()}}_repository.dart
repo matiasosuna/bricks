@@ -8,6 +8,7 @@ import 'package:{{feature_name.snakeCase()}}/src/domain/failures/{{repository_na
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
 
 class Remote{{repository_name.pascalCase()}}Repository implements {{repository_name.pascalCase()}}Repository {
+  Remote{{repository_name.pascalCase()}}Repository(this.httpHelper);
 
   final HttpHelper httpHelper;
 
@@ -29,7 +30,7 @@ subimtPath = '/submit-path';
   @override
   Future<Either<{{repository_name.pascalCase()}}Failure, {{entity_name.pascalCase()}}>> fetchById(String id) async {
     try {
-      final result = await httpHelper.get(path);
+      final result = await httpHelper.get(fetchPath);
       return result.fold(
           (fail) => Left({{repository_name.pascalCase()}}Failure(fail.message)),
           (response) {
@@ -48,7 +49,7 @@ subimtPath = '/submit-path';
   @override
   Future<Either<{{repository_name.pascalCase()}}Failure, List<{{entity_name.pascalCase()}}>>> fetchList() async {
     try {
-      final result = await httpHelper.get(path);
+      final result = await httpHelper.get(fetchListPath);
       return result.fold(
         (fail) => Left({{repository_name.pascalCase()}}Failure(fail.message)),
         (response) {
@@ -68,9 +69,18 @@ subimtPath = '/submit-path';
   @override
   Future<Option<{{repository_name.pascalCase()}}Failure>> submit({{update_entity.pascalCase()}} {{update_entity.camelCase()}}) async {
     try {
-      return const None();
+      final result = await httpHelper.get(fetchListPath);
+      final response = await httpHelper.post(
+        path,
+        data: {},
+      );
+      return response.fold(
+        (failure) => Some(AddVisitorFailure(failure.message ?? '')),
+        (_) => none(),
+      );
     } catch (e) {
-      return Some({{repository_name.pascalCase()}}Failure(e.toString()));
+      log('$e');
+      return Left({{repository_name.pascalCase()}}Failure(e.toString()));
     }
   }
 {{/include_update_method}}
