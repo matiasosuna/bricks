@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '{{entity_name.snakeCase()}}_mapper.freezed.dart';
+part '{{entity_name.snakeCase()}}_model.freezed.dart';
 
-part '{{entity_name.snakeCase()}}_mapper.g.dart';
+part '{{entity_name.snakeCase()}}_model.g.dart';
 
 @freezed
 abstract class {{entity_name.pascalCase()}}Model with _${{entity_name.pascalCase()}}Model {
@@ -13,4 +13,10 @@ abstract class {{entity_name.pascalCase()}}Model with _${{entity_name.pascalCase
 
   factory {{entity_name.pascalCase()}}Model.fromJson(Map<String, dynamic> json) =>
       _${{entity_name.pascalCase()}}ModelFromJson(json);
+
+  const {{entity_name.pascalCase()}}Model._();
+
+  {{entity_name.pascalCase()}} get toEntity {
+    return {{entity_name.pascalCase()}}();
+  }
 }

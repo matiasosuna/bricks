@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:commons/commons.dart';
 import 'dart:async';
 
-import 'package:{{feature_name.snakeCase()}}/src/data/models/{{entity_name.snakeCase()}}_mapper.dart';
+import 'package:{{feature_name.snakeCase()}}/src/data/models/{{entity_name.snakeCase()}}_model.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/failures/{{repository_name.snakeCase()}}_failure.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
@@ -32,7 +32,7 @@ subimtPath = '/submit-path';
     try {
       final result = await httpHelper.get(fetchPath);
       return result.fold(
-          (fail) => Left({{repository_name.pascalCase()}}Failure(fail.message)),
+          (fail) => Left({{repository_name.pascalCase()}}Failure(fail.message ?? '')),
           (response) {
             final model = {{entity_name.pascalCase()}}Model.fromJson(response.data);
             return Right(model.toEntity);
@@ -51,7 +51,7 @@ subimtPath = '/submit-path';
     try {
       final result = await httpHelper.get(fetchListPath);
       return result.fold(
-        (fail) => Left({{repository_name.pascalCase()}}Failure(fail.message)),
+        (fail) => Left({{repository_name.pascalCase()}}Failure(fail.message ?? '')),
         (response) {
           final data = response.data as List<Map<String, dynamic>>;
           final list = data.map((e) => {{entity_name.pascalCase()}}Model.fromJson(e).toEntity).toList();
@@ -69,18 +69,17 @@ subimtPath = '/submit-path';
   @override
   Future<Option<{{repository_name.pascalCase()}}Failure>> submit({{submit_entity_name.pascalCase()}} {{submit_entity_name.camelCase()}}) async {
     try {
-      final result = await httpHelper.get(fetchListPath);
       final response = await httpHelper.post(
-        path,
+        subimtPath,
         data: {},
       );
       return response.fold(
-        (failure) => Some(AddVisitorFailure(failure.message ?? '')),
+        (failure) => Some({{repository_name.pascalCase()}}Failure(failure.message ?? '')),
         (_) => none(),
       );
     } catch (e) {
       log('$e');
-      return Left({{repository_name.pascalCase()}}Failure(e.toString()));
+      return Some({{repository_name.pascalCase()}}Failure(e.toString()));
     }
   }
 {{/include_update_method}}
