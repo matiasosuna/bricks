@@ -30,7 +30,7 @@ class Mock{{repository_name.pascalCase()}}Repository implements {{repository_nam
 
 {{#include_update_method}}
   @override
-  Future<Option<{{repository_name.pascalCase()}}Failure>> submit({{update_entity.pascalCase()}} {{update_entity.camelCase()}}) async {
+  Future<Option<{{repository_name.pascalCase()}}Failure>> submit({{submit_entity_name.pascalCase()}} {{submit_entity_name.camelCase()}}) async {
     try {
       return const None();
     } catch (e) {
