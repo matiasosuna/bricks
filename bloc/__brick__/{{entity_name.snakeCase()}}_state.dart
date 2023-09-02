@@ -15,8 +15,8 @@ const factory {{entity_name.pascalCase()}}State.success({{entity_name.pascalCase
 const factory {{entity_name.pascalCase()}}State.success(List<{{entity_name.pascalCase()}}> list) = Success{{entity_name.pascalCase()}}State;
 {{/is_list}}
 {{#is_submit}}
-const factory {{entity_name.pascalCase()}}State.success( = Success{{entity_name.pascalCase()}}State;
+const factory {{entity_name.pascalCase()}}State.success() = Success{{entity_name.pascalCase()}}State;
 {{/is_submit}}
 
-  const factory {{entity_name.pascalCase()}}State.fail({{repository_name.pascalCase()}}Failure failure) = Fail{{entity_name.pascalCase()}}State;
+  const factory {{entity_name.pascalCase()}}State.fail(String failure) = Fail{{entity_name.pascalCase()}}State;
 }
