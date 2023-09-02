@@ -1,4 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:{{feature_name.snakeCase()}}/src/data/repositories/mock_{{repository_name.snakeCase()}}_repository.dart';
+import 'package:{{feature_name.snakeCase()}}/src/presentation/pages/{{page_name.snakeCase()}}_page.dart';
+
+{{#include_fetch_list_method}}
+import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/list/{{entity_name.snakeCase()}}_item_list_cubit.dart';
+{{/include_fetch_list_method}}
+
+{{#include_update_method}}
+import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/submit/submit_cubit.dart';
+import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/form/form_cubit.dart';
+{{/include_update_method}}
 
 class {{feature_name.pascalCase()}}FeatureBuilder {
   Widget build() {

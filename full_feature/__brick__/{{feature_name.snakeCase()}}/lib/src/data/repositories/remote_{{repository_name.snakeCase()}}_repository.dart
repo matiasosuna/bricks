@@ -1,7 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:commons/commons.dart';
 import 'dart:async';
+import 'dart:developer';
 
+import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 import 'package:{{feature_name.snakeCase()}}/src/data/models/{{entity_name.snakeCase()}}_model.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/failures/{{repository_name.snakeCase()}}_failure.dart';
@@ -12,19 +14,19 @@ class Remote{{repository_name.pascalCase()}}Repository implements {{repository_n
 
   final HttpHelper httpHelper;
 
-  static const String
 
 {{#include_fetch_method}}
-fetchPath = '/fetch-path';
+static const String fetchPath = '/fetch-path';
 {{/include_fetch_method}}
 
 {{#include_fetch_list_method}}
-fetchListPath = '/list-path';
+static const String fetchListPath = '/list-path',
 {{/include_fetch_list_method}}
 
 {{#include_update_method}}
-subimtPath = '/submit-path';
+static const String subimtPath = '/submit-path',
 {{/include_update_method}}
+
 
 {{#include_fetch_method}}
   @override

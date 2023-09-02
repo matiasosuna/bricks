@@ -3,6 +3,7 @@ import 'package:bloc/bloc.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
 
 import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/submit/submit_state.dart';
+import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 
 export 'submit_state.dart';
 
@@ -22,6 +23,6 @@ class SubmitCubit extends Cubit<SubmitState> {
 }
 {{/include_update_method}}
 
-{{^include_fetch_method}}
+{{^include_update_method}}
 remove file
-{{/include_fetch_method}}
+{{/include_update_method}}
