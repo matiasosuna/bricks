@@ -1,7 +1,10 @@
 {{#include_fetch_method}}
 import 'package:bloc/bloc.dart';
 
-import '{{entity_name.snakeCase()}}_state.dart';
+import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
+
+import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/by_id/{{entity_name.snakeCase()}}_state.dart';
+
 export '{{entity_name.snakeCase()}}_state.dart';
 
 class {{entity_name.pascalCase()}}Cubit extends Cubit<{{entity_name.pascalCase()}}State> {

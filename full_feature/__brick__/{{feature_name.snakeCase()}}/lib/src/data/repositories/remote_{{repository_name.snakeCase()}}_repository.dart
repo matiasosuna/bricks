@@ -8,6 +8,7 @@ import 'package:{{feature_name.snakeCase()}}/src/data/models/{{entity_name.snake
 import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/failures/{{repository_name.snakeCase()}}_failure.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
+import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{submit_entity_name.snakeCase()}}.dart';
 
 class Remote{{repository_name.pascalCase()}}Repository implements {{repository_name.pascalCase()}}Repository {
   Remote{{repository_name.pascalCase()}}Repository(this.httpHelper);
@@ -20,11 +21,11 @@ static const String fetchPath = '/fetch-path';
 {{/include_fetch_method}}
 
 {{#include_fetch_list_method}}
-static const String fetchListPath = '/list-path',
+static const String fetchListPath = '/list-path';
 {{/include_fetch_list_method}}
 
 {{#include_update_method}}
-static const String subimtPath = '/submit-path',
+static const String subimtPath = '/submit-path';
 {{/include_update_method}}
 
 

@@ -2,6 +2,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/repositories/{{repository_name.snakeCase()}}_repository.dart';
 
+import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{submit_entity_name.snakeCase()}}.dart';
+
 import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/submit/submit_state.dart';
 import 'package:{{feature_name.snakeCase()}}/src/domain/entities/{{entity_name.snakeCase()}}.dart';
 

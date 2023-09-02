@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:{{feature_name.snakeCase()}}/src/data/repositories/mock_{{repository_name.snakeCase()}}_repository.dart';
 import 'package:{{feature_name.snakeCase()}}/src/presentation/pages/{{page_name.snakeCase()}}_page.dart';
 
+{{#include_fetch_method}}
+import 'package:test/src/presentation/bloc/by_id/{{entity_name.snakeCase()}}_cubit.dart';
+{{/include_fetch_method}}
+
 {{#include_fetch_list_method}}
-import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/list/{{entity_name.snakeCase()}}_item_list_cubit.dart';
+import 'package:{{feature_name.snakeCase()}}/src/presentation/bloc/list/{{entity_name.snakeCase()}}_list_cubit.dart';
 {{/include_fetch_list_method}}
 
 {{#include_update_method}}
